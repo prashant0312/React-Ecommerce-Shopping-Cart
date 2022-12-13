@@ -17,10 +17,9 @@ const Cart = () => {
       </div>
       <div className="cartItems">
         {PRODUCTS.map((product, index) => {
-          if (cartItems[product.id] !== 0) {
-            return ( <CartItem data={product} key={index}/>
-            );
-          }
+          if (cartItems[product.id] !== 0) return null;
+
+          return <CartItem data={product} key={index} />;
         })}
       </div>
       {totalAmount > 0 ? (
