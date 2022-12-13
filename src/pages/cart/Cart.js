@@ -18,7 +18,8 @@ const Cart = () => {
       <div className="cartItems">
         {PRODUCTS.map((product, index) => {
           if (cartItems[product.id] !== 0) {
-            return <CartItem data={product} key={index}/>;
+            return ( <CartItem data={product} key={index}/>
+            );
           }
         })}
       </div>
